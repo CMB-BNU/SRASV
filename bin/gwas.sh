@@ -21,7 +21,7 @@ do
 		;;	
 	esac
 done<$scriptpath/configure
-echo "configure file in: $scriptpath/../configure"
+echo "configure file in: $scriptpath/configure"
 
 #parameters
 Usage (){

@@ -20,7 +20,7 @@ do
 		Rscript=`echo $line|awk '{print $2}'`
 		;;	
 	esac
-done<$scriptpath/../configure
+done<$scriptpath/configure
 echo "configure file in: $scriptpath/../configure"
 
 #parameters

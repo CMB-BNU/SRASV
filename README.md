@@ -1,7 +1,7 @@
 # SRASV: Short-Read Alignment Structural Variants calling pipeline
 
 ## Dependencies
-You can configure softwares in SRASV/configure
+You can configure softwares in SRASV/bin/configure
 ### 1. SV calling
 1. Perl
 2. Python2 

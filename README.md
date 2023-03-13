@@ -129,7 +129,7 @@ Example of CSV file:
 ### 3. Other scripts (in SRASV/scripts)
 
 #### 1. frequency_sv_stat.py
-Script for dividing SVs into singleton (only have one allele), polymorphic (0 < allele frequency < 0.5), major (0.5 ≤ allele frequency < 1), and shared (allele frequency = 1).
+Script for dividing SVs into singleton (only have one allele), polymorphic (more than one allele and allele frequency < 0.5), major (0.5 ≤ allele frequency < 1), and shared (allele frequency = 1).
 
 		Usage: python frequency_sv_stat.py [-h] [-v VCF] [-o OUT]
 		

@@ -161,15 +161,15 @@ python gene_sv_stat.py -v merge.vcf -g gene.gff -o out
 ```
 
 Example of gff file:
-	chr1    EVM     gene    504225  504878  .       -       .       ID=JMA033926;Name=JMA033926.1
-	chr1    EVM     mRNA    504225  504878  .       -       .       ID=JMA033926.1;Parent=JMA033926;Name=JMA033926.1
-	chr1    EVM     exon    504225  504878  .       -       .       ID=JMA033926.1.exon1;Parent=JMA033926.1
-	chr1    EVM     CDS     504225  504878  .       -       0       ID=cds.JMA033926.1;Parent=JMA033926.1
-	chr1    EVM     gene    523885  524255  .       +       .       ID=JMA033951;Name=JMA033951.1
-	chr1    EVM     mRNA    523885  524255  .       +       .       ID=JMA033951.1;Parent=JMA033951;Name=JMA033951.1
-	chr1    EVM     exon    523885  524007  .       +       .       ID=JMA033951.1.exon1;Parent=JMA033951.1
-	chr1    EVM     CDS     523885  524007  .       +       0       ID=cds.JMA033951.1;Parent=JMA033951.1
-	chr1    EVM     exon    524121  524255  .       +       .       ID=JMA033951.1.exon2;Parent=JMA033951.1
-	chr1    EVM     CDS     524121  524255  .       +       0       ID=cds.JMA033951.1;Parent=JMA033951.1
+		chr1    EVM     gene    504225  504878  .       -       .       ID=JMA033926;Name=JMA033926.1
+		chr1    EVM     mRNA    504225  504878  .       -       .       ID=JMA033926.1;Parent=JMA033926;Name=JMA033926.1
+		chr1    EVM     exon    504225  504878  .       -       .       ID=JMA033926.1.exon1;Parent=JMA033926.1
+		chr1    EVM     CDS     504225  504878  .       -       0       ID=cds.JMA033926.1;Parent=JMA033926.1
+		chr1    EVM     gene    523885  524255  .       +       .       ID=JMA033951;Name=JMA033951.1
+		chr1    EVM     mRNA    523885  524255  .       +       .       ID=JMA033951.1;Parent=JMA033951;Name=JMA033951.1
+		chr1    EVM     exon    523885  524007  .       +       .       ID=JMA033951.1.exon1;Parent=JMA033951.1
+		chr1    EVM     CDS     523885  524007  .       +       0       ID=cds.JMA033951.1;Parent=JMA033951.1
+		chr1    EVM     exon    524121  524255  .       +       .       ID=JMA033951.1.exon2;Parent=JMA033951.1
+		chr1    EVM     CDS     524121  524255  .       +       0       ID=cds.JMA033951.1;Parent=JMA033951.1
 ## Citation
 Please cite:

@@ -128,5 +128,48 @@ Example of CSV file:
 
 ### 3. Other scripts (in SRASV/scripts)
 
+#### 1. frequency_sv_stat.py
+Script for dividing SVs into singleton (only have one allele), polymorphic (0 < allele frequency < 0.5), major (0.5 ≤ allele frequency < 1), and shared (allele frequency = 1).
+
+		Usage: python frequency_sv_stat.py [-h] [-v VCF] [-o OUT]
+		
+		Optional arguments:
+		  -h, --help         show this help message and exit
+		  -v VCF, --vcf VCF  Vcf file
+		  -o OUT, --out OUT  Output pre
+
+**Example:**
+
+```bash
+python frequency_sv_stat.py -v merge.vcf -o out
+```
+
+#### 2. gene_sv_stat.py 
+Script for obtaining genes whose CDS regions overlapped with SVs, those genes will be classified into three classes: 1) duplicated genes (genes within DUPs), 2) inverted genes (genes within INVs), and 3) others (genes that were damaged by SVs).
+
+		Usage: python gene_sv_stat.py [-h] [-v VCF] [-g GFF] [-o OUT]
+		
+		Optional arguments:
+		  -h, --help         show this help message and exit
+		  -v VCF, --vcf VCF  Vcf file
+		  -g GFF, --gff GFF  Gff file
+		  -o OUT, --out OUT  Output pre
+**Example:**
+
+```bash
+python gene_sv_stat.py -v merge.vcf -g gene.gff -o out
+```
+
+Example of gff file:
+	chr1    EVM     gene    504225  504878  .       -       .       ID=JMA033926;Name=JMA033926.1
+	chr1    EVM     mRNA    504225  504878  .       -       .       ID=JMA033926.1;Parent=JMA033926;Name=JMA033926.1
+	chr1    EVM     exon    504225  504878  .       -       .       ID=JMA033926.1.exon1;Parent=JMA033926.1
+	chr1    EVM     CDS     504225  504878  .       -       0       ID=cds.JMA033926.1;Parent=JMA033926.1
+	chr1    EVM     gene    523885  524255  .       +       .       ID=JMA033951;Name=JMA033951.1
+	chr1    EVM     mRNA    523885  524255  .       +       .       ID=JMA033951.1;Parent=JMA033951;Name=JMA033951.1
+	chr1    EVM     exon    523885  524007  .       +       .       ID=JMA033951.1.exon1;Parent=JMA033951.1
+	chr1    EVM     CDS     523885  524007  .       +       0       ID=cds.JMA033951.1;Parent=JMA033951.1
+	chr1    EVM     exon    524121  524255  .       +       .       ID=JMA033951.1.exon2;Parent=JMA033951.1
+	chr1    EVM     CDS     524121  524255  .       +       0       ID=cds.JMA033951.1;Parent=JMA033951.1
 ## Citation
 Please cite:

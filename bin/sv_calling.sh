@@ -26,8 +26,8 @@ do
 		survivor=`echo $line|awk '{print $2}'`
 		;;
 	esac
-done<$scriptpath/configure
-echo "configure file in: $scriptpath/configure"
+done<$scriptpath/../configure
+echo "configure file in: $scriptpath/../configure"
 
 #parameters
 Usage (){
@@ -118,7 +118,7 @@ echo "--List of samples: $workpath/samples"
 #mapping
 while read sample
 do
-	$bwa mem -M -t $np $ref_fasta $fqpath/${sample}_1.fq.gz $fqpath/${sample}_2.fq.gz 1>$workpath/${sample}.f.sam 2>$workpath/log/${sample}.samlog
+	$bwa mem -M -R "@RG\tID:${sample}\tSM:${sample}\tPL:Illumina" -t $np $ref_fasta $fqpath/${sample}_1.fq.gz $fqpath/${sample}_2.fq.gz 1>$workpath/${sample}.f.sam 2>$workpath/log/${sample}.samlog
 	$samtools view -@ $np -bS $workpath/${sample}.f.sam 1>$workpath/${sample}.f.bam 2>$workpath/log/${sample}.f.bamlog
 	rm -f $workpath/${sample}.f.sam
 	$samtools sort -@ $np -o $workpath/${sample}.bam $workpath/${sample}.f.bam
@@ -179,7 +179,7 @@ while [ 1 ] ; do
 			ls $lumpy_out/${line}.lumpy.vcf >>$workpath/tmp
 			ls $manta_out/${line}.manta.vcf >>$workpath/tmp
 			ls $pindel_out/${line}.pindel.vcf >>$workpath/tmp
-			$survivor merge tmp 1000 4 1 1 0 50 $outpath/${line}.vcf
+			$survivor merge $workpath/tmp 1000 4 1 1 0 50 $outpath/${line}.vcf
 			ls $outpath/${line}.vcf >>$outpath/vcf.txt
 			rm $workpath/tmp
 		done <$list

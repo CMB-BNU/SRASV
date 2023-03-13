@@ -37,18 +37,21 @@ def F_vcf(filename,af_t):
 			parts=line.split("\t")
 			for part in parts[9:]:
 				gt=part.split(":")[0]
-				if gt == './.':
+				if gt == './.' or gt == '0/0':
 					gts.append(0)
 				elif gt == '0/1':
 					gts.append(1)
 				elif gt == '1/1':
 					gts.append(2)
 			af=Cal_af(gts)
+			allele=0
+			for f in gts:
+				allele+=f
 			if af_t == "single":
-				if af < 0.01:
+				if allele == 1:
 					f_vcf.append(line)
 			if af_t == "poly":
-				if 0.01 < af < 0.5:
+				if allele > 1 and af < 0.5:
 					f_vcf.append(line)
 			if af_t == "major":
 				if 0.5 <= af < 1:

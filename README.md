@@ -131,7 +131,7 @@ Example of CSV file:
 #### 1. frequency_sv_stat.py
 Script for dividing SVs into singleton (only have one allele), polymorphic (more than one allele and allele frequency < 0.5), major (0.5 ≤ allele frequency < 1), and shared (allele frequency = 1).
 
-		Usage: python frequency_sv_stat.py [-h] [-v VCF] [-o OUT]
+		Usage: python3 frequency_sv_stat.py [-h] [-v VCF] [-o OUT]
 		
 		Optional arguments:
 		  -h, --help         show this help message and exit
@@ -147,7 +147,7 @@ python frequency_sv_stat.py -v merge.vcf -o out
 #### 2. gene_sv_stat.py 
 Script for obtaining genes whose CDS regions overlapped with SVs, those genes will be classified into three classes: 1) duplicated genes (genes within DUPs), 2) inverted genes (genes within INVs), and 3) others (genes that were damaged by SVs).
 
-		Usage: python gene_sv_stat.py [-h] [-v VCF] [-g GFF] [-o OUT]
+		Usage: python3 gene_sv_stat.py [-h] [-v VCF] [-g GFF] [-o OUT]
 		
 		Optional arguments:
 		  -h, --help         show this help message and exit

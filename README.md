@@ -22,7 +22,7 @@ You can configure softwares in SRASV/bin/configure
 1. Python3
 2. R (packages: 1.optparse, 2.lfmm, 3.vcfR, 4.dplyr)
 
-### 3. FST
+### 3. F[^ST]
 1. Python3 (Numpy)
 2. VCFtools
 
@@ -130,7 +130,7 @@ Example of CSV file:
 	id2,50,0.5
 	id3,90,0.2
 
-### 3. FST
+### 3. F[^ST]
 
 		Usage: python3 bin/fst.py [-h] [-v VCF] [-p POPULATIONS] [-t THRESHOLD] [-o OUT]
 	
@@ -148,6 +148,21 @@ Example of CSV file:
 ```bash
 python3 bin/fst.py -v merge.vcf -p pop.txt -t 0.05 -o out
 ```
+
+Example of populations file:
+
+	/data/home/juglan/population1
+	/data/home/juglan/population2
+
+/data/home/juglan/population1:
+
+	id1
+	id2
+
+/data/home/juglan/population2/:
+
+	id3
+	id4
 
 ### 4. Other scripts (in SRASV/scripts)
 

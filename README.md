@@ -22,6 +22,10 @@ You can configure softwares in SRASV/bin/configure
 1. Python3
 2. R (packages: 1.optparse, 2.lfmm, 3.vcfR, 4.dplyr)
 
+### 3. FST
+1. Python3 (Numpy)
+2. VCFtools
+
 ## Installation
 
 ```bash
@@ -126,7 +130,26 @@ Example of CSV file:
 	id2,50,0.5
 	id3,90,0.2
 
-### 3. Other scripts (in SRASV/scripts)
+### 3. FST
+
+		Usage: python3 bin/fst.py [-h] [-v VCF] [-p POPULATIONS] [-t THRESHOLD] [-o OUT]
+	
+		Optional arguments:
+		  -h, --help            show this help message and exit
+		  -v VCF, --vcf VCF     Vcf file
+		  -p POPULATIONS, --populations POPULATIONS
+		                        File contains path to all population file
+		  -t THRESHOLD, --threshold THRESHOLD
+		                        Top ? FST
+		  -o OUT, --out OUT     Output dir
+
+**Example:**
+
+```bash
+python3 bin/fst.py -v merge.vcf -p pop.txt -t 0.05 -o out
+```
+
+### 4. Other scripts (in SRASV/scripts)
 
 #### 1. frequency_sv_stat.py
 Script for dividing SVs into singleton (only have one allele), polymorphic (more than one allele and allele frequency < 0.5), major (0.5 ≤ allele frequency < 1), and shared (allele frequency = 1).

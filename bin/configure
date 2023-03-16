@@ -9,7 +9,8 @@ BAMtools /data/home/chenyd/bin/bamtools					#path to BAMtools
 BWA /data/home/chenyd/bin/bwa						#path to bwa
 Picard /data/home/chenyd/bin/picard					#path to Picard
 SURVIVOR /data/home/chenyd/bin/SURVIVOR					#path to SURVIVOR
-Perl	perl								#path to perl
-Python2	python2								#path to python2
-Python3	python3								#path to python3
+Perl perl								#path to perl
+Python2 python2								#path to python2
+Python3 python3								#path to python3
 Rscript Rscript								#path to Rscript
+VCFtools /data/home/chenyd/bin/vcftools					#path to vcftools

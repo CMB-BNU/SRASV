@@ -1,4 +1,4 @@
-# SRASV: Short-Read Alignment Structural Variants calling pipeline
+# SRASV: Short-Read Alignment-based Structural Variants calling pipeline
 
 ## Dependencies
 You can configure softwares in SRASV/bin/configure
